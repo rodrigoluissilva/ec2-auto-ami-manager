@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogStream",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:DescribeImages",
+                "ec2:DeregisterImage",
+                "ec2:DescribeInstances",
+                "ec2:CreateTags",
+                "ec2:CreateSnapshot",
+                "ec2:CreateImage",
+                "ec2:CopyImage",
+                "ec2:DeleteSnapshot",
+                "ec2:DescribeRegions",
+                "ec2:DescribeSnapshots"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
